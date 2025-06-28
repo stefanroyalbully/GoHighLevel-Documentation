@@ -57,5 +57,5 @@ In the Request Body (Raw) section, paste this:
 Replace:
 
 - `your-assistant-id` → located at **Assistants** in the sidebar
-- `your-phone-number-id` → located at**Phone Number** in the sidebar
+- `your-phone-number-id` → located at **Phone Number** in the sidebar
 - Make sure `{{contact.phone}}` matches your contact data format (10-digit U.S. numbers only)
