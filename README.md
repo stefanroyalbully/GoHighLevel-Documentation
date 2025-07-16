@@ -64,6 +64,12 @@ Replace:
 
 ### Structured Data: `assistantOverrides.variableValues`
 
+In the `Structured Data` Tab inside the selected assistant, click the `Add Property` button to add new properties. These are subject to data capture requirements. For fields that can only be either Yes or No, set them as a `boolean` in the `Type` dropdown.
+
+If you are not sure what to use, a good fallback would be to set them as `string`.
+
+**For example:**
+
 | Name               | Description                                                                                      |
 | ------------------ | ------------------------------------------------------------------------------------------------ |
 | firstName          | Either the provided {{firstName}} if the caller confirms it or the caller's first name.          |
@@ -80,6 +86,12 @@ Replace:
 | preferredDayOWeek  | Caller's preferred appointment day of the week.                                                  |
 | preferredTimeOfDay | Caller's preferred appointment time (morning/afternoon).                                         |
 
-### Reading Incoming Webhook Data
+### Messaging: Reading Incoming Webhook Data
+
+1. In GoHighLevel, create a workflow and select `Inbound Webhook` as the trigger.
+2. Copy the URL inside the `URL (POST/GET/PUT)` field and paste it in the `Server URL` of the `Messaging` tab inside the VAPI dashboard.
+3. De-select everything except `end-of-call-report` inside the `Server Messages` section inside the `Messaging` tab.
+4. Click publish, and then make a "successful" phone call where you give your information as if you were a client of the company that you were calling.
+5. Go back to the tab with the `Inbound Webhook` tag, and check the `Mapping Reference` dropdown and press select the request that VAPI did.
 
 To learn more: https://docs.vapi.ai/quickstart/introduction
